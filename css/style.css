@@ -1,0 +1,121 @@
+/* font-family: 'Arvo', serif; */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+    --clr-bg-hdr : #202332;
+    --clr-bg-btn : #e88872;
+    --clr-bg-advantages : #d7dfe1;
+    --clr-blue : #2a304a;
+    --clr-bg-onglet : #22273a;
+    --clr-txt-primary : #fff;
+    --clr-txt-secondary : #000;
+    --nav-height : 60px;
+}
+
+/* helper classes */
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex {
+    display: flex;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Arvo', serif;
+}
+section {
+    padding: 5rem 0;
+}
+
+/* header */
+header {
+    color: var(--clr-txt-primary);
+}
+header nav {
+    width: 100%;
+    height: var(--nav-height);
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-bg-hdr);
+}
+header nav img {
+    height: 100%;
+}
+header .hero {
+    height: 100vh;
+    background-image: url(../img/neve-pet-shop-04.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #69708e;
+    background-blend-mode:multiply;
+}
+header .hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+header .hero h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+header .hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8;
+    width: 80%;
+    margin-bottom: 1.5rem;
+}
+header .hero button {
+    background-color: var(--clr-bg-btn);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2rem 2.5rem;
+    border-radius: 300px;
+}
+
+/* advantages */
+
+main #advantages {
+    background-color: var(--clr-bg-advantages);
+    flex-direction: column;
+    gap: 2rem;
+}
+main #advantages .card {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 5px solid var(--clr-bg-btn);
+}
+main #advantages .card i {
+    background-color: var(--clr-blue);
+    color: var(--clr-txt-primary);
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+main #advantages .card h3 {
+    margin-bottom: 2rem;
+}
+
+/* about */
+
