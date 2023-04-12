@@ -18,38 +18,127 @@
 <body>
     <header>
         <nav class="flex">
-            <img src="./img/neve-pet-shop-logo.png" alt="Logo boutique">
+            <img src="./img/pet-shop-logo.png" alt="Logo boutique">
             <i class="fa-solid fa-bars"></i>
+            <!-- Home About Shop Blog Contact <search icon> -->
         </nav>
         <div class="hero flexcenter">
             <div class="container">
                 <h1>Discover the finest products for your pet</h1>
-                <h2>A beautifully simple starter site with WooCommerce integration</h2>
+                <h2>A beautifully simple starter site with CSS integration</h2>
                 <button> Go to shop <i class="fa-solid fa-arrow-right fa-bounce"></i></button>
             </div>
         </div>
     </header>
     <main>
         <section id="advantages" class="flexcenter">
-            <div class="card container">
-                <i class="fa-solid fa-paw"></i>
-                <h3>Pet-friendly Materials</h3>
-                <p>We care about your pet as you do, and deliver the finest materials</p>
+            <div class="container flex">
+                <div class="card ">
+                    <i class="fa-solid fa-paw"></i>
+                    <h3>Pet-friendly Materials</h3>
+                    <p>We care about your pet as you do, and deliver the finest materials</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Free Shipping</h3>
+                    <p>We care about your pet as you do, and deliver the finest materials</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <h3>Flexible Payments</h3>
+                    <p>We care about your pet as you do, and deliver the finest materials</p>
+                </div>
             </div>
-            <div class="card container">
-                <i class="fa-solid fa-truck-fast"></i>
-                <h3>Free Shipping</h3>
-                <p>We care about your pet as you do, and deliver the finest materials</p>
+        </section>
+        <section id="about">
+            <div class="container flex">
+                <img src="./img/toutou1.jpg" alt="A beautyfull puppy">
+                <div class="card">
+                    <h2>
+                        We have been on business since 1995
+                    </h2>
+                    <p>
+                        We love pets, so we have created a shop that lets you get premium-quality products for your
+                        little friends
+                    </p>
+
+                    <div class="card">
+                        <div class="onglet">
+                            <p>Our values</p>
+                            <p>Show pony anti-pattern, for it’s a simple lift and shift job the right info at the right
+                                time
+                                to the right people anti-pattern. Ping me table the discussion , so teams were able to
+                                drive
+                                adoption and awareness nor innovation is hot right now reach out </p>
+                        </div>
+                        <div class="onglet">
+                            <p>Our Company</p>
+                        </div>
+                        <div class="onglet">
+                            <p>Our Materials</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="card container">
-                <i class="fa-solid fa-money-check-dollar"></i>
-                <h3>Flexible Payments</h3>
-                <p>We care about your pet as you do, and deliver the finest materials</p>
+        </section>
+        <section id="products">
+            <div class="container flex">
+                <div class="card">
+                    <h2>
+                        Featured Products
+                    </h2>
+                    <hr>
+                </div>
+                <div class="card2">
+                    <img src="./img/toutou2.webp" alt="Banana Sweater Puppy">
+                    <h3>
+                        Banana Sweater
+                    </h3>
+                    <p>€23.00</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="card2">
+                    <img src="./img/toutou3.webp" alt="Dog Yellow Sweater Puppy">
+                    <h3>
+                        Dog Yellow Sweater
+                    </h3>
+                    <p>€44.00</p>
+                    <button>Add to cart</button>
+                </div>
+                <div class="card2">
+                    <img src="./img/toutou4.webp" alt="Cute little puppy Sweater">
+                    <h3>
+                        Cute little puppy Sweater
+                    </h3>
+                    <p>€65.00</p>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+            <div class="card flexcenter">
+                <button>Browse all products</button>
+            </div>
+        </section>
+        <section id="news-letter">
+            <div class="container">
+                    <h2>
+                        Join our newsletter for special deals and offers
+                    </h2>
+                <div class="flexcenter">
+                    <form action="" class="flex">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" name="name" id="form_name" placeholder="Your name">
+                        <label for="mail">Email<span>*</span></label>
+                        <input type="email" name="mail" id="form_mail" placeholder="Email">
+                        <input type="button" value="Join Newsletter">
+                    </form>
+                    <img src="./img/coco.webp" alt="A parrot with beautifull blue and yellow colors">
+                </div>
             </div>
         </section>
     </main>
     <footer>
-
+        <p>Made with ❤️, HTML and CSS</p>
     </footer>
 </body>
 

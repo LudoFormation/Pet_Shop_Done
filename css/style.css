@@ -14,7 +14,9 @@
     --clr-bg-onglet : #22273a;
     --clr-txt-primary : #fff;
     --clr-txt-secondary : #000;
+    --clr-txt-pink : #e88872;
     --nav-height : 60px;
+    --card-width : 288px;
 }
 
 /* helper classes */
@@ -58,7 +60,7 @@ header nav img {
 }
 header .hero {
     height: 100vh;
-    background-image: url(../img/neve-pet-shop-04.jpg);
+    background-image: url(../img/toutou-memere.jpg);
     background-size: cover;
     background-position: center;
     background-color: #69708e;
@@ -72,12 +74,12 @@ header .hero .container {
     text-align: center;
 }
 header .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem,10vw,3rem);
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
 header .hero h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 10vw,1.5rem);
     font-weight: 400;
     line-height: 1.8;
     width: 80%;
@@ -85,7 +87,7 @@ header .hero h2 {
 }
 header .hero button {
     background-color: var(--clr-bg-btn);
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4vw,1.5rem);
     font-weight: 700;
     text-transform: uppercase;
     padding: 2rem 2.5rem;
@@ -96,26 +98,168 @@ header .hero button {
 
 main #advantages {
     background-color: var(--clr-bg-advantages);
-    flex-direction: column;
-    gap: 2rem;
+
 }
-main #advantages .card {
+main #advantages .container {
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+main #advantages .container .card {
+    max-width: var(--card-width);
     background-color: #fff;
     padding: 2rem;
     text-align: center;
     border-radius: 5px;
     border-bottom: 5px solid var(--clr-bg-btn);
 }
-main #advantages .card i {
+main #advantages .container .card i {
     background-color: var(--clr-blue);
     color: var(--clr-txt-primary);
     padding: 1rem;
     border-radius: 50%;
     font-size: 2rem;
 }
-main #advantages .card h3 {
+main #advantages .container .card h3 {
     margin-bottom: 2rem;
 }
 
 /* about */
+main #about {
+    background-color: var(--clr-blue);
+}
+main #about .container {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main #about .container img {
+    width: 100%;
+    max-width: calc(var(--card-width) * 2); 
+    
+}
+main #about .container .card {
+    width: 100%;
+    max-width: calc(var(--card-width)*2);
+    color: var(--clr-txt-primary);
+    padding: 1rem 0;
+}
+main #about .container .card .onglet p:nth-child(1) {
+    background-color: var(--clr-bg-hdr);
+    padding: 1rem;
+    height: 3rem;
+    color: var(--clr-bg-btn);
+}
+main #about .container .card .onglet p:nth-child(2){
+    width: 100%;
+    background-color: var(--clr-bg-onglet);
+    padding: 1rem;
+    color: var(--clr-txt-primary);
+}
+main #about .container .onglet {
+    width: 100%;
+    max-width: var(--card-width);
+    background-color: var(--clr-bg-hdr);
+    color: var(--clr-txt-pink);
+    padding: 1rem;
+}
+main #about .container .card:nth-child(3) {
+    padding-bottom: 0;
+}
 
+/* products */
+main #products .container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+main #products .container .card {
+    width: 100%;
+    color: var(--clr-txt-secondary);
+    text-align: center;
+    padding: 1rem 0;
+}
+main #products .container .card hr {
+    width: 100%;
+    margin: 2rem 0;
+}
+main #products .container .card2 {
+    width: 90%;
+    max-width: var(--card-width);
+    margin: 2rem 0;
+    text-align: center;
+}
+main #products .container .card2 img {
+    width: 100%;
+}
+main #products .container .card2 h3 {
+    color: var(--clr-txt-pink);
+    padding: 1rem;
+}
+main #products .card button,
+main #products .container .card2 button {
+    background-color: var(--clr-bg-btn);
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    border-radius: 300px;
+    margin-top: 1rem;
+}
+main #products .card button {
+    margin: 0 auto;
+}
+
+/* news-letter */
+
+main #news-letter {
+    background-color: var(--clr-blue);
+}
+main #news-letter .container {
+    text-align: center;
+    color: var(--clr-txt-primary);
+}
+main #news-letter .container .flexcenter {
+    flex-wrap: wrap;
+    align-self: baseline; 
+    gap: 2rem;
+    margin-top: 2rem;
+}
+main #news-letter .container form {
+    align-self: flex-start;
+    text-align: left;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: calc(var(--card-width) * 3);
+    flex-direction: column;
+}
+main #news-letter .container form label span{
+    color: #f00;
+}
+main #news-letter .container form input {
+    padding: 1rem;
+}
+main #news-letter .container form input[type="button"] {
+    background-color: var(--clr-bg-btn);
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+    border-radius: 300px;
+    margin-top: 1rem;
+}
+main #news-letter .container img {
+    align-self: flex-start;
+    max-width: var(--card-width);
+    width: 100%;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--clr-bg-hdr);
+    color: var(--clr-txt-primary);
+    text-align: center;
+    padding: 2rem 0;
+}
