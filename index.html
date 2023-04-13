@@ -19,8 +19,16 @@
     <header>
         <nav class="flex">
             <img src="./img/pet-shop-logo.png" alt="Logo boutique">
-            <i class="fa-solid fa-bars"></i>
-            <!-- Home About Shop Blog Contact <search icon> -->
+            <i class="fa-solid fa-bars" id="burger__menu"></i>
+            <div id="menu__content">
+                <ul>
+                    <li><a class="animLink" href="#">Home</a></li>
+                    <li><a class="animLink" href="#about">About</a></li>
+                    <li><a class="animLink" href="#products">Shop</a></li>
+                    <li><a class="animLink" href="#news-letter">News-letter</a></li>
+                    <li><a class="animLink" href="#">Search</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="hero flexcenter">
             <div class="container">
@@ -54,17 +62,18 @@
             <div class="container flex">
                 <img src="./img/toutou1.jpg" alt="A beautyfull puppy">
                 <div class="card">
-                    <h2>
-                        We have been on business since 1995
-                    </h2>
-                    <p>
-                        We love pets, so we have created a shop that lets you get premium-quality products for your
-                        little friends
-                    </p>
-
-                    <div class="card">
+                    <div id="about_header">
+                        <h2>
+                            We have been on business since 1995
+                        </h2>
+                        <p>
+                            We love pets, so we have created a shop that lets you get premium-quality products for your
+                            little friends
+                        </p>
+                    </div>
+                    <div id="card_onglet">
                         <div class="onglet">
-                            <p>Our values</p>
+                            <p class="active">Our values</p>
                             <p>Show pony anti-pattern, for it’s a simple lift and shift job the right info at the right
                                 time
                                 to the right people anti-pattern. Ping me table the discussion , so teams were able to
@@ -121,9 +130,9 @@
         </section>
         <section id="news-letter">
             <div class="container">
-                    <h2>
-                        Join our newsletter for special deals and offers
-                    </h2>
+                <h2>
+                    Join our newsletter for special deals and offers
+                </h2>
                 <div class="flexcenter">
                     <form action="" class="flex">
                         <label for="name">Name<span>*</span></label>
@@ -140,6 +149,8 @@
     <footer>
         <p>Made with ❤️, HTML and CSS</p>
     </footer>
+
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

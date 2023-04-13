@@ -10,6 +10,7 @@
     --clr-bg-hdr : #202332;
     --clr-bg-btn : #e88872;
     --clr-bg-advantages : #d7dfe1;
+    --clr-bg-wht : #fff;
     --clr-blue : #2a304a;
     --clr-bg-onglet : #22273a;
     --clr-txt-primary : #fff;
@@ -31,6 +32,9 @@
 .container {
     width: 80%;
     margin: 0 auto;
+}
+.active {
+    display: block;
 }
 
 body {
@@ -58,6 +62,27 @@ header nav {
 header nav img {
     height: 100%;
 }
+
+
+header #menu__content.active {
+    top: var(--nav-height);
+}
+header #menu__content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+header #menu__content ul li {
+    list-style-type: none;
+}
+header #menu__content ul li a {
+    text-decoration: none;
+    color: var(--clr-txt-secondary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
 header .hero {
     height: 100vh;
     background-image: url(../img/toutou-memere.jpg);
@@ -131,27 +156,40 @@ main #about {
 }
 main #about .container {
     gap: 2rem;
+    justify-content: space-between;
     flex-wrap: wrap;
     justify-content: center;
 }
 main #about .container img {
     width: 100%;
-    max-width: calc(var(--card-width) * 2); 
+    max-width: calc(var(--card-width) * 1); 
     
+}
+main #about #about_header {
+    background-color: var(--clr-blue);
+    width: 100%;
+    padding-bottom: 1rem;
 }
 main #about .container .card {
     width: 100%;
-    max-width: calc(var(--card-width)*2);
+    max-width: calc(var(--card-width));
+    background-color: var(--clr-bg-onglet);
     color: var(--clr-txt-primary);
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 }
-main #about .container .card .onglet p:nth-child(1) {
+main #about .container .card #card_onglet {
+    position: relative;
+}
+main #about .container .card #card_onglet .onglet .active {
+    color: var(--clr-txt-pink);
+}
+main #about .container .card #card_onglet .onglet p:nth-child(1) {
     background-color: var(--clr-bg-hdr);
     padding: 1rem;
     height: 3rem;
-    color: var(--clr-bg-btn);
+
 }
-main #about .container .card .onglet p:nth-child(2){
+main #about .container .card #card_onglet .onglet p:nth-child(2){
     width: 100%;
     background-color: var(--clr-bg-onglet);
     padding: 1rem;
@@ -161,11 +199,46 @@ main #about .container .onglet {
     width: 100%;
     max-width: var(--card-width);
     background-color: var(--clr-bg-hdr);
-    color: var(--clr-txt-pink);
     padding: 1rem;
 }
 main #about .container .card:nth-child(3) {
     padding-bottom: 0;
+}
+
+@media (min-width: 760px) {
+    main #about .container .card {
+        max-width: calc(var(--card-width) * 2);
+    }
+    main #about .container .card .onglet{
+        max-width: 100%;
+        margin-top: 1rem;
+        height: 0;
+    }
+    main #about .container .card #card_onglet .onglet:nth-child(1) p:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+    }
+    main #about .container .card #card_onglet .onglet:nth-child(1) p:nth-child(2) {
+        margin-top: 2rem;
+        height: fit-content;
+    }
+    main #about .container .card #card_onglet .onglet:nth-child(2) p {
+        position: absolute;
+        top: 0;
+        left: 30%;
+        width: 30%;
+        border: 2px solid var(--clr-blue);
+    }
+    main #about .container .card .onglet:nth-child(3) p {
+        position: absolute;
+        top: 0;
+        left: 60%;
+        width: 30%;
+        border: 2px solid var(--clr-blue);
+    }
+
 }
 
 /* products */
@@ -262,4 +335,36 @@ footer {
     color: var(--clr-txt-primary);
     text-align: center;
     padding: 2rem 0;
+}
+
+
+/* media queries */
+@media (max-width: 768px) {
+    header #menu__content {
+        background-color: var(--clr-bg-wht);
+        padding: 1rem;
+        position: absolute;
+        top: -250px;
+        right: 20px;
+        transition: top 0.5s ease-out;
+    }
+}
+
+@media (min-width: 769px) {
+    #burger__menu {
+        display: none;
+    }
+    #menu__content {
+        background-color: transparent;
+        position: initial;
+    }
+    header #menu__content ul {
+        flex-direction: row;
+    }
+    header #menu__content ul li a {
+        text-decoration: none;
+        color: var(--clr-txt-primary);
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
 }
